@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { FormEvent, MouseEvent, useEffect, useRef, useState } from 'react';
+import { FormEvent, type MouseEvent as ReactMouseEvent, useEffect, useRef, useState } from 'react';
 import {
   AnimatePresence,
   motion,
@@ -320,7 +320,7 @@ export default function Home() {
     setModalOpen(true);
   };
 
-  const handleLogoClick = (e: MouseEvent<HTMLAnchorElement>) => {
+  const handleLogoClick = (e: ReactMouseEvent<HTMLAnchorElement>) => {
     if (window.location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
